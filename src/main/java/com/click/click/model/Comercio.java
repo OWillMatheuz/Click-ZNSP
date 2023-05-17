@@ -41,9 +41,34 @@ public class Comercio {
 	
 	@Nullable
 	private String imagemCardapio;
+	
+	@Nullable
+	private String imagemCardapio2;
+	
+	@Nullable
+	private String imagemCardapio3;
+	
+	@Nullable
+	private String imagemCardapio4;
+	
+	@Nullable
+	private String imagemCardapio5;
 
 	@Nullable
 	private String urlCardapio;
+	
+	@Nullable
+	private String instaComercio;
+	
+	
+	@Nullable
+	private String faceComercio;
+	
+
+
+	@Nullable
+	private String youComercio;
+	
 	
 	@ManyToOne
 	@JsonIgnoreProperties ("comercio")
@@ -53,23 +78,9 @@ public class Comercio {
 	@JsonIgnoreProperties ("comercio")
 	private Bairro bairro;
 	
-
-
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
-
-	public Bairro getBairro() {
-		return bairro;
-	}
-
-	public void setBairro(Bairro bairro) {
-		this.bairro = bairro;
-	}
+	@ManyToOne
+	@JsonIgnoreProperties("comercio")
+	private Usuario usuario;
 
 	public Long getId() {
 		return id;
@@ -127,6 +138,38 @@ public class Comercio {
 		this.imagemCardapio = imagemCardapio;
 	}
 
+	public String getImagemCardapio2() {
+		return imagemCardapio2;
+	}
+
+	public void setImagemCardapio2(String imagemCardapio2) {
+		this.imagemCardapio2 = imagemCardapio2;
+	}
+
+	public String getImagemCardapio3() {
+		return imagemCardapio3;
+	}
+
+	public void setImagemCardapio3(String imagemCardapio3) {
+		this.imagemCardapio3 = imagemCardapio3;
+	}
+
+	public String getImagemCardapio4() {
+		return imagemCardapio4;
+	}
+
+	public void setImagemCardapio4(String imagemCardapio4) {
+		this.imagemCardapio4 = imagemCardapio4;
+	}
+
+	public String getImagemCardapio5() {
+		return imagemCardapio5;
+	}
+
+	public void setImagemCardapio5(String imagemCardapio5) {
+		this.imagemCardapio5 = imagemCardapio5;
+	}
+
 	public String getUrlCardapio() {
 		return urlCardapio;
 	}
@@ -134,5 +177,54 @@ public class Comercio {
 	public void setUrlCardapio(String urlCardapio) {
 		this.urlCardapio = urlCardapio;
 	}
+
+	public String getInstaComercio() {
+		return instaComercio;
+	}
+
+	public void setInstaComercio(String instaComercio) {
+		this.instaComercio = instaComercio;
+	}
+
+	public String getFaceComercio() {
+		return faceComercio;
+	}
+
+	public void setFaceComercio(String faceComercio) {
+		this.faceComercio = faceComercio;
+	}
+
+	public String getYouComercio() {
+		return youComercio;
+	}
+
+	public void setYouComercio(String youComercio) {
+		this.youComercio = youComercio;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public Bairro getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(Bairro bairro) {
+		this.bairro = bairro;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+		
 
 }
